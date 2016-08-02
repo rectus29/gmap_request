@@ -35,7 +35,7 @@ ini_set("display_errors", 1);
             <tbody>
             <?php
             if (isset($_POST["input"])) {
-                //@var $temp Sring
+                //@var $temp String
                 foreach (explode(PHP_EOL, $_POST["input"]) as $temp) {
                     if (strlen($temp) > 0) {
                         $result = file_get_contents("https://maps.googleapis.com/maps/api/geocode/xml?address=" . trim(str_replace(" ", ",", $temp)) . "&sensor=false&key=AIzaSyBLiQOYBk_RshSCaS52eRHvhXb9IYpSzbk");
